@@ -7,6 +7,7 @@ def stats(name):
                             headers={"TRN-Api-Key": "70961613-1369-445d-9d0c-77583457b40e"})
         work = data.json()
         pcstats = [work["lifeTimeStats"][8]["value"], work["lifeTimeStats"][9]["value"],
+                   work["lifeTimeStats"][10]["value"],
                    work["lifeTimeStats"][11]["value"]]
     except:
         pcstats = [-1]
@@ -15,6 +16,7 @@ def stats(name):
                             headers={"TRN-Api-Key": "70961613-1369-445d-9d0c-77583457b40e"})
         work = data.json()
         xboxstats = [work["lifeTimeStats"][8]["value"], work["lifeTimeStats"][9]["value"],
+                     work["lifeTimeStats"][10]["value"],
                      work["lifeTimeStats"][11]["value"]]
     except:
         xboxstats = [-1]
@@ -23,6 +25,7 @@ def stats(name):
                             headers={"TRN-Api-Key": "70961613-1369-445d-9d0c-77583457b40e"})
         work = data.json()
         psnstats = [work["lifeTimeStats"][8]["value"], work["lifeTimeStats"][9]["value"],
+                    work["lifeTimeStats"][10]["value"],
                     work["lifeTimeStats"][11]["value"]]
     except:
         psnstats = [-1]
@@ -38,4 +41,4 @@ def stats(name):
         return psnstats
 
 
-print(stats("RockyRobot"))
+print(stats("alphaboss16"))
