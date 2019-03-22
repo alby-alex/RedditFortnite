@@ -6,7 +6,7 @@ def main():
     subreddit = reddit.subreddit('FortniteCompetitive+FortniteBR')
 
     for submission in subreddit.stream.comments(skip_existing=True):
-        if ("!stats" in submission.body):
+        if "!stats" in submission.body:
             giveResponse(submission)
 
 
@@ -17,7 +17,7 @@ def giveResponse(s):
     save = save[k + 6:]
     save = save.strip()
     list = stats.stats(save)
-    if (list is None):
+    if list is None:
         s.reply("No user found with name: " + save)
     else:
         s.reply(
