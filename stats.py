@@ -39,6 +39,3 @@ def stats(name):
         return xboxstats
     else:
         return psnstats
-
-
-print(stats("alphaboss16"))
